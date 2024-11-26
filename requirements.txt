@@ -1,0 +1,6 @@
+pytube
+python-dotenv
+mariadb
+beautifulsoup4
+requests
+yt_dlp
