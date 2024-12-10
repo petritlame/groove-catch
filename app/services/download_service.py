@@ -20,7 +20,7 @@ def download_audio(url, download_dir):
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
-        'outtmpl': f'{download_dir}/%(title)s.mp3',  # Use the dynamic directory
+        'outtmpl': f'{download_dir}/%(title)s',  # Use the dynamic directory
         'verbose': True,  # Enables verbose output for debugging
     }
 
@@ -43,7 +43,7 @@ def rename_downloaded_file(d):
         old_filename = d['filename']
         title = d['info_dict']['title']
         cleaned_title = clean_title(title)
-        new_filename = os.path.join('songs', f"{cleaned_title}.mp3")
+        new_filename = os.path.join('songs', f"{cleaned_title}")
         os.rename(old_filename, new_filename)
         print(f"Downloaded and saved: {new_filename}")
 
