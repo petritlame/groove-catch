@@ -26,7 +26,6 @@ def main():
         os.makedirs(download_dir)
 
     videos = fetch_playlist_videos(playlist_url)
-
     if videos:
         print(f"Fetched {len(videos)} videos. Saving to database...")
         create_database()
